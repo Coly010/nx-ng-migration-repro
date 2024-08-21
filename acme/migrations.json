@@ -1,0 +1,9 @@
+{
+  "schematics": {
+    "testing": {
+      "version": "0.0.2",
+      "description": "Migration for v0.0.2",
+      "factory": "./src/migrations/testing"
+    }
+  }
+}

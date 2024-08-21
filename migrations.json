@@ -1,0 +1,12 @@
+{
+  "migrations": [
+    {
+      "cli": "ng",
+      "version": "0.0.2",
+      "description": "Testing",
+      "factory": "./src/migrations/testing",
+      "package": "@ng-mig/acme",
+      "name": "testing"
+    }
+  ]
+}

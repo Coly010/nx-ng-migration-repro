@@ -1,0 +1,56 @@
+{
+  "name": "acme",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "acme/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/acme",
+        "main": "acme/src/index.ts",
+        "tsConfig": "acme/tsconfig.lib.json",
+        "assets": [
+          "acme/*.md",
+          {
+            "input": "./acme/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./acme/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./acme",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./acme",
+            "glob": "executors.json",
+            "output": "."
+          },
+          {
+            "input": "./acme",
+            "glob": "migrations.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "acme/jest.config.ts"
+      }
+    }
+  }
+}
