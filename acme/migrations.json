@@ -1,9 +1,16 @@
 {
   "schematics": {
     "testing": {
+      "cli": "ng",
       "version": "0.0.2",
       "description": "Migration for v0.0.2",
       "factory": "./src/migrations/testing"
+    },
+    "with-devkit": {
+      "cli": "ng",
+      "version": "0.0.2",
+      "description": "Migration for v0.0.2 with-devkit",
+      "factory": "./src/migrations/with-devkit"
     }
   }
 }
