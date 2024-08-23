@@ -7,6 +7,14 @@
       "factory": "./src/migrations/testing",
       "package": "@ng-mig/acme",
       "name": "testing"
+    },
+    {
+      "cli": "ng",
+      "version": "0.0.2",
+      "description": "Testing",
+      "factory": "./src/migrations/with-devkit",
+      "package": "@ng-mig/acme",
+      "name": "with-devkit"
     }
   ]
 }
